@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseASP.NETWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfde9e56d9d6baeade5617db6bd7bac4f69a76e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseASP.NETWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseASP.NETWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

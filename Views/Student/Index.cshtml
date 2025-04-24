@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DatabaseASP.NETWeb.Models.Student>
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-5">Student List</h1>
+        <a asp-action="Create" class="btn btn-success btn-lg">Add New Student</a>
+    </div>
+
+    <table class="table table-hover table-bordered table-striped table-lg text-center align-middle fs-5">
+        <thead class="table-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Name)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.Id</td>
+                        <td>@student.Name</td>
+                        <td>
+                            <div class="btn-group btn-group-lg" role="group">
+                                <a asp-action="Details" asp-route-id="@student.Id" class="btn btn-outline-primary">Details</a>
+                                <a asp-action="Edit" asp-route-id="@student.Id" class="btn btn-outline-warning">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-outline-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-muted text-center">No students found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
